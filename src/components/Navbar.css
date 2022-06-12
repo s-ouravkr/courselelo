@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Cutive+Mono&family=Monoton&family=Open+Sans&family=Rock+Salt&family=Shippori+Antique&family=Telex&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.Main-Navbar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: rgb(170, 92, 243); */
+  background-color: #33332d;
+  padding: 1rem 2rem 1rem 2rem;
+  box-shadow: 0 0 17px #33332d;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+.Logo {
+  margin-right: 1rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: rgba(167, 243, 196, 0.973);
+  font-size: 1.3rem;
+}
+
+.Left-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+h5 {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.Nav-tag ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.Nav-tag ul li {
+  margin: 0 0.2rem;
+  padding: 0 0.8rem;
+  /* position: fixed; */
+  cursor: pointer;
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+}
+.Nav-tag ul li a:hover {
+  border-bottom: 2px solid rgb(248, 248, 248);
+}
+/* .Nav-tag ul li:hover{
+    color: goldenrod;
+} */
+li {
+  list-style: none;
+}
+
+.search-bar input {
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  width: 12rem;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+.search-bar button {
+  padding: 0.12rem 0.4rem 0.12rem 0.4rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: lightgrey;
+  font-family: "Open Sans", sans-serif;
+}
+.searchicon {
+  display: none;
+  color: white;
+}
+
+.Hamburger {
+  display: none;
+  color: white;
+  margin-right: 1rem;
+}
+
+/* All category CSS */
+.AC-icon {
+  position: relative;
+}
+.All-Category {
+  position: absolute;
+  width: 15rem;
+  /* visibility: hidden; */
+  display: none;
+  top: 3rem;
+  z-index: 10;
+  background-color: #33332d;
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  /* left:18rem; */
+  left: -1rem;
+}
+
+.All-Category ul {
+  display: block;
+}
+.All-Category ul li {
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.All-Category ul li a:hover {
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.AC-icon:hover > .All-Category {
+  /* visibility: visible; */
+  display: block;
+  transition: all 0.3s ease;
+  top: 2.4rem;
+}
+/* Media Queries */
+
+@media (max-width: 860px) {
+  .Nav-tag {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .Hamburger {
+    display: block;
+  }
+  .searchicon {
+    display: block;
+  }
+  /* .Main-Navbar{position: relative;} */
+  .mobile-view {
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    left: 0;
+    z-index: 10;
+    position: fixed;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    top: 4rem;
+    color: white;
+    background-color: #33332d;
+    font-family: "Open Sans", sans-serif;
+    /* overflow-y: scroll; */
+  }
+  .mobile-view ul {
+    margin-top: 2rem;
+  }
+  .mobile-view ul li {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+  }
+  .mobile-view ul li a:hover {
+    border-bottom: 2px solid rgb(248, 248, 248);
+    cursor: pointer;
+  }
+  .AC-icon:hover > .All-Category {
+    background: red;
+    left: 50%;
+    /* bottom: 80%; */
+    top: -0.1rem;
+    width: 12rem;
+  }
+}
+@media (min-width: 860px) {
+  .mobile-view ul {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+  .mobile-view ul li {
+    margin: 0 0.2rem;
+    padding: 0 0.8rem;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+  }
+  .All-Category ul {
+    display: block;
+  }
+}
+
+@media (max-width: 300px) {
+  .Main-Navbar {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  }
+  .Logo {
+    margin-right: 1.2rem;
+    font-family: "Alegreya Sans SC", sans-serif;
+    color: rgba(167, 243, 196, 0.973);
+    font-size: 0.8rem;
+  }
+}
